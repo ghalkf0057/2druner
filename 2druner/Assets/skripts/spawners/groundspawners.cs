@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class groundspawners : MonoBehaviour
+public class GroundSpawners : MonoBehaviour
 {
-    [SerializeField] private GameObject templatePlatforms;
-
-    private GameObject spawnPlatforms;
+    [SerializeField] private GameObject[] templatePlatforms; //Переписать
 
     private void Start()
     {
@@ -15,9 +13,6 @@ public class groundspawners : MonoBehaviour
 
     private void Platforms()
     {
-      spawnPlatforms = Instantiate(templatePlatforms, transform.position, Quaternion.identity) as GameObject;
+      Instantiate(templatePlatforms[Random.Range(0, templatePlatforms.Length)], transform.position, Quaternion.identity); // переписать
     }
-  
 }
-
-
