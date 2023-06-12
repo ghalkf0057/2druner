@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using TMPro;
 public class player : MonoBehaviour
 {
     [Header("Settings")]
@@ -11,6 +10,8 @@ public class player : MonoBehaviour
     [SerializeField] private float jumpVelocity = 20f; //сила прыжка
 
     private Animator animation;//Импортируем компонент animator
+
+    [SerializeField] private GameObject PlayerUI; //Юзер интерфейс игрока
 
     private Rigidbody2D rigidbody;
 
@@ -45,6 +46,7 @@ public class player : MonoBehaviour
         if(other.gameObject.tag == "Obstacle")//проверка на соприкосновение с препятствиями
         {
             DeathScreen.SetActive(true); //Включение экрана смерти при столкновении с припятствием
+            PlayerUI.SetActive(false);
             Time.timeScale = 0f; //остановка времени
         }
     }
