@@ -1534,7 +1534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   templatePlatforms:
   - {fileID: 6165281946631134208, guid: a820e8f06f3a4a0499dc4e73d46f373e, type: 3}
-  - {fileID: 6165281946631134208, guid: 0196d8b6c41b03c478f8f95b02b9a751, type: 3}
+  - {fileID: 6165281946631134208, guid: aeaf071f5db3f0d43a9ba0d0ad837e6f, type: 3}
 --- !u!4 &1843052356
 Transform:
   m_ObjectHideFlags: 0
